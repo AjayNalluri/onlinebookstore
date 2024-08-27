@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: java
+  namespace: namespace-workflow-1724738756346
+  labels:
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app: java
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
